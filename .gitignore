@@ -1,0 +1,2 @@
+# Lake build products and the Mathlib checkout (run `lake exe cache get` after cloning)
+.lake/

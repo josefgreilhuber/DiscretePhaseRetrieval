@@ -1,0 +1,26 @@
+name = "DiscretePR"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["DiscretePR"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.31.0-rc2"
+
+# The standalone comparator `Showcase`, its proof roots, and `Check` are top-level modules; the
+# other roots are folders (no import-only root files, hence the submodule globs `X.+`). `Check`
+# imports (transitively) every file except `PolyFock.Check`. Files refer to each other only by
+# module names.
+[[lean_lib]]
+name = "DiscretePR"
+roots = ["Definitions", "Showcase", "Main", "STFT", "STFTComparatorBridge", "Check", "Warren", "PolyFock", "Remez", "VCInequality", "DiscreteNorming",
+         "DiscretePhaseRetrieval", "ContinuousPhaseRetrieval"]
+globs = ["Definitions", "Showcase", "Main", "STFT", "STFTComparatorBridge", "Check", "Warren.+", "PolyFock.+", "Remez.+", "VCInequality.+",
+         "DiscreteNorming.+", "DiscretePhaseRetrieval.+", "ContinuousPhaseRetrieval.+"]
