@@ -53,17 +53,4 @@ lake build Check     # axiom audit (prints #print axioms)
 
 Expected axioms everywhere: `propext`, `Classical.choice`, `Quot.sound`.
 
-A from-scratch build compiles many modules importing large parts of Mathlib. If a machine with
-limited memory reports transient `failed to read file … .olean` errors, limit the parallelism
-(for instance `LEAN_NUM_THREADS=4 lake build`) or simply run `lake build` again; it resumes where
-it stopped.
-
-## Renaming this folder
-
-As a standalone project nothing depends on the folder name at all.
-
-When built from a parent Lake project instead (a `[[lean_lib]]` with `srcDir` pointing here):
-
-No file in this folder mentions the folder's name; the files refer to each other only by module
-name (`import DiscreteNorming.Defs`, …). To move or rename the folder, change `srcDir` of the
-library entry in the root `lakefile.toml` — nothing else.
+Code created by the authors with assistance from Codex and Claude Code.
