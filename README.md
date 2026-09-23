@@ -53,4 +53,6 @@ lake build Check     # axiom audit (prints #print axioms)
 
 Expected axioms everywhere: `propext`, `Classical.choice`, `Quot.sound`.
 
-Code created by the authors with assistance from Codex and Claude Code.
+## Acknowledgements
+
+Code created by the authors (Jaume de Dios Pont, Josef Greilhuber, Lukas Liehr and Mitchell Taylor) with assistance from Codex and Claude Code.
